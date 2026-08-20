@@ -1,0 +1,12 @@
+node_modules
+**/node_modules
+.git
+.cache
+.local
+artifacts/*/dist
+artifacts/mobile/static-build
+*.log
+.env
+.env.*
+!/.env.example
+!artifacts/mobile/.env.example
