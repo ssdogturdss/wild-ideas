@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "q5mhAtCbm7i-mElPxbc36"
+uri = "file://artifacts/mobile/assets/images/icon.png"
+type = "image"
+title = "synthsolutions-mobile-icon"
