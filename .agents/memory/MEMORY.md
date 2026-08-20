@@ -1,0 +1,7 @@
+- [Replit proxy routing](proxy-routing.md) — proxy does NOT strip path prefix; /api/* forwards to port 8080 as /api/*; use app.use("/api", router)
+- [API client URL prefix](api-client-prefix.md) — generated URLs already include /api prefix from OpenAPI spec; never call setBaseUrl("/api") or you get double prefix
+- [React Query auth gate](react-query-auth-gate.md) — after login, must invalidate useGetMe cache and show isFetching spinner to prevent immediate redirect back to /login
+- [Password hashing](password-hashing.md) — fixed salt "ss-pw-salt-v1"; never use SESSION_SECRET for hashing (unknown value)
+- [IDE terminal without node-pty](ide-terminal.md) — node-pty fails to compile on Replit (no python3-dev/g++); use child_process.spawn + manual REPL echo instead.
+- [WebSocket terminal auth](ide-terminal.md) — WS upgrade session cookies unreliable; use one-time token from POST /api/ide/ws-token, passed as ?token= query param; tokens expire in 60s.
+- [pnpm onlyBuiltDependencies](pnpm-build-scripts.md) — native packages need explicit entry in pnpm-workspace.yaml onlyBuiltDependencies; pnpm approve-builds is interactive and unscriptable.
